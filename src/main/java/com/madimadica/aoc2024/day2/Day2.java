@@ -53,13 +53,9 @@ public class Day2 implements AdventOfCodeDay {
     record Report(List<Integer> levels) {
 
         public Report without(int index) {
-            List<Integer> result = new ArrayList<>(levels.size() - 1);
-            for (int i = 0; i < levels.size(); ++i) {
-                if (i != index) {
-                    result.add(levels.get(i));
-                }
-            }
-            return new Report(result);
+            List<Integer> copy = new ArrayList<>(levels);
+            copy.remove(index);
+            return new Report(copy);
         }
 
         public boolean isSafe1() {

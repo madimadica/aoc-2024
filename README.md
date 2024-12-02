@@ -5,6 +5,7 @@ Solution packages can be found in [`src/main/java/com/madimadica/aoc2024/`](http
 
 ## Quick Links
 * [Day 1](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/day1/Day1.java)
+* [Day 2](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/day2/Day2.java)
 
 ## Misc Info
 ### Input Files
