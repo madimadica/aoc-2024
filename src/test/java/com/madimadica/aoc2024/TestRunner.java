@@ -20,7 +20,7 @@ public class TestRunner {
 
     public static void runPart1(Class<? extends AdventOfCodeDay> day) {
         int dayNumber = Integer.parseInt(day.getSimpleName().substring(3));
-        String fileFormat = "/day%d_part1.txt";
+        String fileFormat = "/day%d.txt";
         AdventOfCodeInput part1 = AdventOfCodeInput.of(readResource(fileFormat.formatted(dayNumber)));
         try {
             var noArgsConstructor = day.getDeclaredConstructor();
@@ -34,7 +34,7 @@ public class TestRunner {
 
     public static void runPart2(Class<? extends AdventOfCodeDay> day) {
         int dayNumber = Integer.parseInt(day.getSimpleName().substring(3));
-        String fileFormat = "/day%d_part2.txt";
+        String fileFormat = "/day%d.txt";
         AdventOfCodeInput part2 = AdventOfCodeInput.of(readResource(fileFormat.formatted(dayNumber)));
         try {
             var noArgsConstructor = day.getDeclaredConstructor();

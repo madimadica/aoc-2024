@@ -8,7 +8,7 @@ Solution packages can be found in [`src/main/java/com/madimadica/aoc2024/`](http
 
 ## Misc Info
 ### Input Files
-Input file data is stored in the `test/resources` directory as `day<num>_part<num>.txt`, so `day1_part2.txt` for example.
+Input file data is stored in the `test/resources` directory as `day<num>.txt`, so `day1.txt` for example.
 
 ### Running Inputs
 Solutions are invoked reflectively by calling `TestRunner.run(DayX.class);`. This internally runs `TestRunner.runPart1(...)` and `TestRunner.runPart2(...)`, which can be run separately with JUnit. 
