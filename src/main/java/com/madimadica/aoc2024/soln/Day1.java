@@ -1,4 +1,4 @@
-package com.madimadica.aoc2024.day1;
+package com.madimadica.aoc2024.soln;
 
 import com.madimadica.aoc2024.common.AdventOfCodeDay;
 import com.madimadica.aoc2024.common.AdventOfCodeInput;

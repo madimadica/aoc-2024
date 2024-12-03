@@ -4,8 +4,8 @@ A collection of my Java 22 solutions to [Advent of Code 2024](https://adventofco
 Solution packages can be found in [`src/main/java/com/madimadica/aoc2024/`](https://github.com/madimadica/aoc-2024/tree/main/src/main/java/com/madimadica/aoc2024)
 
 ## Quick Links
-* [Day 1](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/day1/Day1.java)
-* [Day 2](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/day2/Day2.java)
+* [Day 1](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/soln/Day1.java)
+* [Day 2](https://github.com/madimadica/aoc-2024/blob/main/src/main/java/com/madimadica/aoc2024/soln/Day2.java)
 
 ## Misc Info
 ### Input Files
