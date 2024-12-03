@@ -1,6 +1,7 @@
 package com.madimadica.aoc2024.common;
 
 import java.util.List;
+import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
 public class Utils {
@@ -18,5 +19,9 @@ public class Utils {
 
     public static List<Integer> splitWhitespaceInt(String input) {
         return splitInt(input, Regex.WHITESPACES);
+    }
+
+    public static List<MatchResult> allMatches(String input, Pattern regex) {
+        return regex.matcher(input).results().toList();
     }
 }

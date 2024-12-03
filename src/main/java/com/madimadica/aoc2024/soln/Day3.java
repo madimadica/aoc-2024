@@ -2,11 +2,14 @@ package com.madimadica.aoc2024.soln;
 
 import com.madimadica.aoc2024.common.AdventOfCodeDay;
 import com.madimadica.aoc2024.common.AdventOfCodeInput;
+import com.madimadica.aoc2024.common.Utils;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import static com.madimadica.aoc2024.common.Utils.allMatches;
 
 public class Day3 implements AdventOfCodeDay {
     @Override
@@ -33,26 +36,26 @@ public class Day3 implements AdventOfCodeDay {
 
     @Override
     public Object part2(AdventOfCodeInput input) {
-        var reMul = Pattern.compile("mul\\((\\d{1,3}),(\\d{1,3})\\)");
-        var reDo = Pattern.compile("do\\(\\)");
-        var reDont = Pattern.compile("don't\\(\\)");
         String allData = String.join("", input.lines());
 
         List<Data> dataset = new ArrayList<>();
 
-        for (var match : reMul.matcher(allData).results().toList()) {
+        var reMul = Pattern.compile("mul\\((\\d{1,3}),(\\d{1,3})\\)");
+        for (var match : allMatches(allData, reMul)) {
             String lhs = match.group(1);
             String rhs = match.group(2);
             var startPos = match.start();
             dataset.add(new Data(startPos, DataType.MUL, Integer.parseInt(lhs), Integer.parseInt(rhs)));
         }
 
-        for (var match : reDo.matcher(allData).results().toList()) {
+        var reDo = Pattern.compile("do\\(\\)");
+        for (var match : allMatches(allData, reDo)) {
             var startPos = match.start();
             dataset.add(new Data(startPos, DataType.DO, null, null));
         }
 
-        for (var match : reDont.matcher(allData).results().toList()) {
+        var reDont = Pattern.compile("don't\\(\\)");
+        for (var match : allMatches(allData, reDont)) {
             var startPos = match.start();
             dataset.add(new Data(startPos, DataType.DONT, null, null));
         }
