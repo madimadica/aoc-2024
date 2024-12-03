@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class Day3 implements AdventOfCodeDay {
     @Override
@@ -15,10 +14,9 @@ public class Day3 implements AdventOfCodeDay {
         var re = Pattern.compile("mul\\((\\d{1,3}),(\\d{1,3})\\)");
         int total = 0;
         for (String line : input.lines()) {
-            var matcher = re.matcher(line);
-            while (matcher.find()) {
-                String lhs = matcher.group(1);
-                String rhs = matcher.group(2);
+            for (var match : re.matcher(line).results().toList()) {
+                String lhs = match.group(1);
+                String rhs = match.group(2);
                 total += Integer.parseInt(lhs) * Integer.parseInt(rhs);
             }
         }
@@ -42,27 +40,22 @@ public class Day3 implements AdventOfCodeDay {
 
         List<Data> dataset = new ArrayList<>();
 
-        var matcher = reMul.matcher(allData);
-        while (matcher.find()) {
-            String lhs = matcher.group(1);
-            String rhs = matcher.group(2);
-            var startPos = matcher.start();
+        for (var match : reMul.matcher(allData).results().toList()) {
+            String lhs = match.group(1);
+            String rhs = match.group(2);
+            var startPos = match.start();
             dataset.add(new Data(startPos, DataType.MUL, Integer.parseInt(lhs), Integer.parseInt(rhs)));
         }
 
-
-        var matcherDo = reDo.matcher(allData);
-        while (matcherDo.find()) {
-            var startPos = matcherDo.start();
+        for (var match : reDo.matcher(allData).results().toList()) {
+            var startPos = match.start();
             dataset.add(new Data(startPos, DataType.DO, null, null));
         }
 
-        var matcherDont = reDont.matcher(allData);
-        while (matcherDont.find()) {
-            var startPos = matcherDont.start();
+        for (var match : reDont.matcher(allData).results().toList()) {
+            var startPos = match.start();
             dataset.add(new Data(startPos, DataType.DONT, null, null));
         }
-
 
         dataset.sort(Comparator.comparingInt(Data::pos));
 
