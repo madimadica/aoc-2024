@@ -1,11 +1,9 @@
 package com.madimadica.aoc2024.soln;
 
 import com.madimadica.aoc2024.TestRunner;
-import com.madimadica.aoc2024.common.AdventOfCodeInput;
+import com.madimadica.aoc2024.common.input.AdventOfCodeInput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Day3Test {
 

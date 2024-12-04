@@ -1,7 +1,7 @@
 package com.madimadica.aoc2024;
 
 import com.madimadica.aoc2024.common.AdventOfCodeDay;
-import com.madimadica.aoc2024.common.AdventOfCodeInput;
+import com.madimadica.aoc2024.common.input.AdventOfCodeInput;
 
 
 public class TestRunner {

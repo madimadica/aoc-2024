@@ -1,8 +1,8 @@
 package com.madimadica.aoc2024.soln;
 
 import com.madimadica.aoc2024.common.AdventOfCodeDay;
-import com.madimadica.aoc2024.common.AdventOfCodeInput;
-import com.madimadica.aoc2024.common.Utils;
+import com.madimadica.aoc2024.common.input.AdventOfCodeInput;
+import com.madimadica.aoc2024.common.MappingStrategy;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -36,6 +36,8 @@ public class Day3 implements AdventOfCodeDay {
 
     @Override
     public Object part2(AdventOfCodeInput input) {
+        List<List<Long>> grid = input.mapLines(MappingStrategy.NUMBERS);
+
         String allData = String.join("", input.lines());
 
         List<Data> dataset = new ArrayList<>();
